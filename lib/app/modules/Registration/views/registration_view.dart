@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:test_screens/utils/size_config.dart';
 
 import '../controllers/registration_controller.dart';
 
 class RegistrationView extends GetView<RegistrationController> {
-  const RegistrationView({Key? key}) : super(key: key);
+  const RegistrationView({super.key});
   @override
   Widget build(BuildContext context) {
+    SizeConfig.init(context);
     return Scaffold(
       appBar: AppBar(
         title: const Text('RegistrationView'),
