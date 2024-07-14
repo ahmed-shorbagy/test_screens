@@ -16,6 +16,8 @@ class ToDoSectionOptions extends StatelessWidget {
         ElevatedButton(
           onPressed: () {},
           style: ButtonStyle(
+              padding: const WidgetStatePropertyAll(
+                  EdgeInsets.symmetric(horizontal: 10, vertical: 2)),
               backgroundColor: const WidgetStatePropertyAll(Color(0xffF4F4F4)),
               shape: WidgetStatePropertyAll(RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(4),

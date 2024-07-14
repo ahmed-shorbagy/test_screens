@@ -1,8 +1,11 @@
 class ToDoProjectsItemModel {
-  String title, imag, subtitle, status;
+  String title, image, subtitle;
+  ToDoStatus status;
   ToDoProjectsItemModel(
       {required this.title,
-      required this.imag,
+      required this.image,
       required this.subtitle,
       required this.status});
 }
+
+enum ToDoStatus { NeedToRieview, NotComplated, approved }

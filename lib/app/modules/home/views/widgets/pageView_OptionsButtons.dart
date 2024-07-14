@@ -40,11 +40,11 @@ class _PageViewOptionButtonsState extends State<PageViewOptionButtons> {
                   backgroundColor: WidgetStatePropertyAll(
                       isToDoSelected ? const Color(0xff476572) : Colors.white),
                   padding: const WidgetStatePropertyAll(
-                      EdgeInsets.symmetric(vertical: 20)),
+                      EdgeInsets.symmetric(vertical: 18)),
                   shape:
                       const WidgetStatePropertyAll(RoundedRectangleBorder())),
               child: Text(
-                "To Do ()",
+                "To Do (12)",
                 style: AppStyles.regular14.copyWith(
                     color: isToDoSelected
                         ? Colors.white
@@ -58,7 +58,7 @@ class _PageViewOptionButtonsState extends State<PageViewOptionButtons> {
                   backgroundColor: WidgetStatePropertyAll(
                       !isToDoSelected ? const Color(0xff476572) : Colors.white),
                   padding: const WidgetStatePropertyAll(
-                      EdgeInsets.symmetric(vertical: 20)),
+                      EdgeInsets.symmetric(vertical: 18)),
                   shape:
                       const WidgetStatePropertyAll(RoundedRectangleBorder())),
               onPressed: () {
@@ -72,7 +72,7 @@ class _PageViewOptionButtonsState extends State<PageViewOptionButtons> {
                 );
               },
               child: Text(
-                "Comments ()",
+                "Comments (11)",
                 style: AppStyles.regular14.copyWith(
                     color: !isToDoSelected
                         ? Colors.white

@@ -13,6 +13,8 @@ class Assets {
   /// assets/images/project1.svg
   static const String imagesProject1 = "assets/images/preject1.png";
   static const String imagesArrowDown = "assets/images/arrowdown.png";
+  static const String imagesHome = "assets/images/home.png";
+  static const String imagesProfile = "assets/images/profile.png";
 
   /// Assets for imagesProject2
   /// assets/images/project2.svg

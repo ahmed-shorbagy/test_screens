@@ -21,12 +21,12 @@ class _ToDoAndCommentsPageViewSectionState
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(),
+      width: double.infinity,
+      decoration: const BoxDecoration(color: Colors.white),
       child: Column(
         children: [
           const PageViewOptionButtons(),
-          SizedBox(
-            height: 300,
+          Expanded(
             child: PageView(
               controller: pageController,
               children: const [ToDoSection(), CeommentsSection()],
