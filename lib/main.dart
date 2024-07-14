@@ -10,6 +10,7 @@ void main() {
       title: "Test_Screens",
       initialRoute: AppPages.INITIAL,
       getPages: AppPages.routes,
+      debugShowCheckedModeBanner: false,
     ),
   );
 }

@@ -8,10 +8,10 @@ abstract class AppStyles {
     fontSize: 14,
   );
   static TextStyle regular12 = const TextStyle(
-    fontFamily: fontFamily,
-    fontWeight: FontWeight.w400,
-    fontSize: 12,
-  );
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w400,
+      fontSize: 12,
+      color: Colors.white);
   static TextStyle regular10 = const TextStyle(
     fontFamily: fontFamily,
     fontWeight: FontWeight.w400,
@@ -27,4 +27,9 @@ abstract class AppStyles {
     fontWeight: FontWeight.w500,
     fontSize: 18,
   );
+  static TextStyle semiBold32 = const TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w600,
+      fontSize: 32,
+      color: Colors.white);
 }
