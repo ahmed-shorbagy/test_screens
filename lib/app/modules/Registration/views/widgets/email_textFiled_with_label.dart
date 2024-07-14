@@ -22,17 +22,23 @@ class EmailTextFieldWIthLabel extends StatelessWidget {
           height: 16,
         ),
         TextFormField(
+            validator: (value) {
+              if (value == null || value.isEmpty) {
+                return 'This field is required';
+              }
+              return null;
+            },
             decoration: InputDecoration(
-          hintText: hintText,
-          hintStyle: AppStyles.regular14,
-          contentPadding:
-              const EdgeInsets.symmetric(horizontal: 14, vertical: 14),
-          filled: true,
-          fillColor: Colors.white,
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(6),
-          ),
-        ))
+              hintText: hintText,
+              hintStyle: AppStyles.regular14,
+              contentPadding:
+                  const EdgeInsets.symmetric(horizontal: 14, vertical: 14),
+              filled: true,
+              fillColor: Colors.white,
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(6),
+              ),
+            ))
       ],
     );
   }

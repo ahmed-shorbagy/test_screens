@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:test_screens/app/modules/Registration/views/widgets/login_form.dart';
+import 'package:test_screens/app/routes/app_pages.dart';
 import 'package:test_screens/core/utils/app_styles.dart';
 
 class LinearGradientColorSignInButton extends StatelessWidget {
@@ -21,7 +24,14 @@ class LinearGradientColorSignInButton extends StatelessWidget {
         borderRadius: BorderRadius.circular(8),
       ),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          if (formKey.currentState!.validate()) {
+            formKey.currentState!.save();
+            Get.offNamed(Routes.HOME);
+          } else {
+            autovalidateMode = AutovalidateMode.always;
+          }
+        },
         style: ElevatedButton.styleFrom(
           backgroundColor: Colors.transparent,
           shadowColor: Colors.transparent,

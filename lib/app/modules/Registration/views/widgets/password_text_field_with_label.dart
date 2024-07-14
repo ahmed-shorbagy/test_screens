@@ -32,6 +32,12 @@ class _PasswordTextFieldWIthLabelState
           height: 16,
         ),
         TextFormField(
+            validator: (value) {
+              if (value == null || value.isEmpty) {
+                return 'This field is required';
+              }
+              return null;
+            },
             obscureText: obscureText,
             decoration: InputDecoration(
               suffixIcon: IconButton(

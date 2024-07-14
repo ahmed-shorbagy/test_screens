@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:test_screens/app/modules/Registration/views/widgets/email_textFiled_with_label.dart';
 import 'package:test_screens/app/modules/Registration/views/widgets/linear_gradientColor_sign_in_button.dart';
+import 'package:test_screens/app/modules/Registration/views/widgets/login_form.dart';
 import 'package:test_screens/app/modules/Registration/views/widgets/login_options.dart';
 import 'package:test_screens/app/modules/Registration/views/widgets/password_text_field_with_label.dart';
 import 'package:test_screens/core/theme/theme_constants.dart';
@@ -49,28 +50,7 @@ class RegistrationView extends GetView<RegistrationController> {
               const SizedBox(
                 height: 45,
               ),
-              const Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  EmailTextFieldWIthLabel(
-                    label: "Email",
-                    hintText: "Enter your email",
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  PasswordTextFieldWIthLabel(
-                      label: "Password", hintText: "***********"),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  LoginOptions(),
-                  SizedBox(
-                    height: 24,
-                  ),
-                  LinearGradientColorSignInButton()
-                ],
-              )
+              const LoginForm()
             ],
           ),
         ),
