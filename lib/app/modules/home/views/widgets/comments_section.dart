@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:test_screens/app/modules/home/views/widgets/comments_section_body.dart';
 import 'package:test_screens/app/modules/home/views/widgets/comments_section_card.dart';
 import 'package:test_screens/app/modules/home/views/widgets/to_do_options_section.dart';
-import 'package:test_screens/core/utils/app_styles.dart';
-
-import 'comments_section_header.dart';
 
 class CeommentsSection extends StatelessWidget {
   const CeommentsSection({super.key});

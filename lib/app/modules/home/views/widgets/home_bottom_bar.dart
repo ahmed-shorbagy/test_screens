@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:test_screens/app/modules/home/views/widgets/bottom_bar_item.dart';
 
-import '../../../../../core/utils/app_styles.dart';
 import '../../../../../core/utils/assets.dart';
 
 class HomeBottomBar extends StatelessWidget {
