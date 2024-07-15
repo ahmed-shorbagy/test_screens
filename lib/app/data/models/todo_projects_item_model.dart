@@ -8,4 +8,4 @@ class ToDoProjectsItemModel {
       required this.status});
 }
 
-enum ToDoStatus { NeedToRieview, NotComplated, approved }
+enum ToDoStatus { NeedToRieview, NotComplated, Approved, Inprogress }

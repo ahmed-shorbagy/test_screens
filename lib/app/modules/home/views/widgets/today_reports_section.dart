@@ -15,12 +15,12 @@ class ToDayReportsSection extends StatelessWidget {
           title: "Friday 10 Nov",
           image: Assets.imagesProject1,
           subtitle: "project Name - Reports",
-          status: ToDoStatus.approved),
+          status: ToDoStatus.Approved),
       ToDoProjectsItemModel(
           title: "Friday 10 Nov",
           image: Assets.imagesProject1,
           subtitle: "project Name - Reports",
-          status: ToDoStatus.approved),
+          status: ToDoStatus.Approved),
     ];
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,

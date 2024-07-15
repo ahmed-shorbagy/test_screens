@@ -12,7 +12,7 @@ class ToDoProjectsItem extends StatelessWidget {
     switch (status) {
       case ToDoStatus.NeedToRieview:
         return const Color(0xffA70000);
-      case ToDoStatus.approved:
+      case ToDoStatus.Approved:
         return Colors.white;
       case ToDoStatus.NotComplated:
         return const Color(0xffFC9700);

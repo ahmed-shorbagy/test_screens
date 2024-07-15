@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:get/get.dart';
 import 'package:test_screens/core/utils/app_styles.dart';
 import 'package:test_screens/core/utils/assets.dart';
 
@@ -25,7 +26,9 @@ class AllProjectsAppBar extends StatelessWidget {
               Row(
                 children: [
                   IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.back();
+                      },
                       icon: const Icon(
                         Icons.arrow_back,
                         color: Colors.white,
