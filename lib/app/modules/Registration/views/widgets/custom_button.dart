@@ -4,8 +4,8 @@ import 'package:test_screens/app/modules/Registration/views/widgets/login_form.d
 import 'package:test_screens/app/routes/app_pages.dart';
 import 'package:test_screens/core/utils/app_styles.dart';
 
-class LinearGradientColorSignInButton extends StatelessWidget {
-  const LinearGradientColorSignInButton({
+class CustomButton extends StatelessWidget {
+  const CustomButton({
     super.key,
   });
 

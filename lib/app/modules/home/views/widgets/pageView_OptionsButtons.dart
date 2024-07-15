@@ -1,20 +1,29 @@
 import 'package:flutter/material.dart';
-
-import '../../../../../core/utils/app_styles.dart';
-import 'todo_and_comments_pageView_section.dart';
+import 'package:test_screens/app/modules/home/views/widgets/search_options.dart';
 
 class PageViewOptionButtons extends StatefulWidget {
-  const PageViewOptionButtons({
-    super.key,
-  });
+  const PageViewOptionButtons({super.key});
 
   @override
   State<PageViewOptionButtons> createState() => _PageViewOptionButtonsState();
 }
 
-bool isToDoSelected = true;
-
 class _PageViewOptionButtonsState extends State<PageViewOptionButtons> {
+  bool isToDoSelected = true;
+  final PageController pageController =
+      PageController(); // Ensure you have this
+
+  void _onButtonPressed(bool toDoSelected, int pageIndex) {
+    setState(() {
+      isToDoSelected = toDoSelected;
+    });
+    pageController.animateToPage(
+      pageIndex,
+      duration: const Duration(milliseconds: 300),
+      curve: Curves.easeInOut,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -24,58 +33,26 @@ class _PageViewOptionButtonsState extends State<PageViewOptionButtons> {
       child: Row(
         children: [
           Expanded(
-            child: ElevatedButton(
-              onPressed: () {
-                setState(() {
-                  isToDoSelected = true;
-                });
-                pageController.animateToPage(
-                  0,
-                  duration: const Duration(milliseconds: 300),
-                  curve: Curves.easeInOut,
-                );
-              },
-              style: ButtonStyle(
-                  backgroundColor: WidgetStatePropertyAll(
-                      isToDoSelected ? const Color(0xff476572) : Colors.white),
-                  padding: const WidgetStatePropertyAll(
-                      EdgeInsets.symmetric(vertical: 18)),
-                  shape:
-                      const WidgetStatePropertyAll(RoundedRectangleBorder())),
-              child: Text(
-                "To Do (12)",
-                style: AppStyles.regular14.copyWith(
-                    color: isToDoSelected
-                        ? Colors.white
-                        : const Color(0xff5E5E5E)),
+            child: CustomHomeButton(
+              padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 8),
+              text: 'To Do (12)',
+              isSelected: isToDoSelected,
+              onPressed: () => _onButtonPressed(true, 0),
+              borderRadius: const BorderRadius.only(
+                topLeft: Radius.circular(4),
+                bottomLeft: Radius.circular(4),
               ),
             ),
           ),
           Expanded(
-            child: ElevatedButton(
-              style: ButtonStyle(
-                  backgroundColor: WidgetStatePropertyAll(
-                      !isToDoSelected ? const Color(0xff476572) : Colors.white),
-                  padding: const WidgetStatePropertyAll(
-                      EdgeInsets.symmetric(vertical: 18)),
-                  shape:
-                      const WidgetStatePropertyAll(RoundedRectangleBorder())),
-              onPressed: () {
-                setState(() {
-                  isToDoSelected = false;
-                });
-                pageController.animateToPage(
-                  2,
-                  duration: const Duration(milliseconds: 300),
-                  curve: Curves.easeInOut,
-                );
-              },
-              child: Text(
-                "Comments (11)",
-                style: AppStyles.regular14.copyWith(
-                    color: !isToDoSelected
-                        ? Colors.white
-                        : const Color(0xff5E5E5E)),
+            child: CustomHomeButton(
+              padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 8),
+              text: 'Comments (11)',
+              isSelected: !isToDoSelected,
+              onPressed: () => _onButtonPressed(false, 2),
+              borderRadius: const BorderRadius.only(
+                topRight: Radius.circular(4),
+                bottomRight: Radius.circular(4),
               ),
             ),
           ),

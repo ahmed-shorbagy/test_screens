@@ -13,7 +13,7 @@ class RegistrationView extends GetView<RegistrationController> {
   const RegistrationView({super.key});
   @override
   Widget build(BuildContext context) {
-    SizeConfig.init(context);
+    SizeConfig().init(context);
     return Scaffold(
       backgroundColor: kLightPrimaryColor,
       resizeToAvoidBottomInset: false,

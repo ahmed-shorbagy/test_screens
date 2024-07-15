@@ -2,25 +2,25 @@ import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/app_styles.dart';
 
-class EmailTextFieldWIthLabel extends StatelessWidget {
-  const EmailTextFieldWIthLabel({
+class CustomTextFeild extends StatelessWidget {
+  const CustomTextFeild({
     super.key,
-    required this.label,
     required this.hintText,
+    this.suffixicon,
+    this.prefixicon,
+    this.isobsecure,
+    required this.fillColor,
   });
-  final String label, hintText;
+  final String hintText;
+  final Widget? suffixicon, prefixicon;
+  final bool? isobsecure;
+  final Color fillColor;
+
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Text(
-          label,
-          style: AppStyles.regular12,
-        ),
-        const SizedBox(
-          height: 16,
-        ),
         TextFormField(
             validator: (value) {
               if (value == null || value.isEmpty) {
@@ -28,14 +28,18 @@ class EmailTextFieldWIthLabel extends StatelessWidget {
               }
               return null;
             },
+            obscureText: isobsecure ?? false,
             decoration: InputDecoration(
+              suffixIcon: suffixicon,
+              prefixIcon: prefixicon,
               hintText: hintText,
               hintStyle: AppStyles.regular14,
               contentPadding:
                   const EdgeInsets.symmetric(horizontal: 14, vertical: 14),
               filled: true,
-              fillColor: Colors.white,
+              fillColor: fillColor,
               border: OutlineInputBorder(
+                borderSide: BorderSide.none,
                 borderRadius: BorderRadius.circular(6),
               ),
             ))

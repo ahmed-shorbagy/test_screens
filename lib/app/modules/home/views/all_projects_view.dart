@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_screens/app/modules/Registration/views/widgets/custom_text_feild.dart';
 import 'package:test_screens/app/modules/home/views/widgets/all_projects_app_bar.dart';
 import 'package:test_screens/app/modules/home/views/widgets/all_projects_search_field.dart';
 import 'package:test_screens/app/modules/home/views/widgets/search_options.dart';
@@ -22,7 +23,11 @@ class AllProjectsView extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              const AllProjectsSearchField(),
+              const CustomTextFeild(
+                hintText: "Search",
+                fillColor: Color(0xffEAEAEA),
+                prefixicon: Icon(Icons.search),
+              ),
               const SizedBox(
                 height: 16,
               ),

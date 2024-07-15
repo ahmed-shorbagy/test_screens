@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:test_screens/app/data/models/search_results_item_model.dart';
 import 'package:test_screens/app/data/models/todo_projects_item_model.dart';
-import 'package:test_screens/app/modules/home/views/widgets/approved_status_container.dart';
+import 'package:test_screens/app/modules/home/views/widgets/approved_and_needtoreview_status_container.dart';
 import 'package:test_screens/app/modules/home/views/widgets/circular_precentage_chart.dart';
 import 'package:test_screens/app/modules/home/views/widgets/date_container.dart';
-import 'package:test_screens/app/modules/home/views/widgets/need_to_review_status_container.dart';
 import 'package:test_screens/core/utils/app_styles.dart';
 
 class SearchResultsItem extends StatelessWidget {
