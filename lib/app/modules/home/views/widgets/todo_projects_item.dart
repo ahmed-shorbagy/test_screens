@@ -42,15 +42,21 @@ class ToDoProjectsItem extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Row(
             children: [
-              Container(
-                height: 32,
-                width: 32,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(4),
-                  image: DecorationImage(
-                    fit: BoxFit.fill,
-                    image: AssetImage(
-                      toDoProjectsItemModel.image,
+              AspectRatio(
+                aspectRatio: 1,
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Container(
+                    height: 35,
+                    width: 35,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(4),
+                      image: DecorationImage(
+                        fit: BoxFit.fill,
+                        image: AssetImage(
+                          toDoProjectsItemModel.image,
+                        ),
+                      ),
                     ),
                   ),
                 ),

@@ -13,24 +13,30 @@ class DateContainer extends StatelessWidget {
     // Format the date to "11 Nov"
     String formattedDate = DateFormat('d MMM').format(now);
 
-    return Container(
-      alignment: Alignment.center,
-      margin: EdgeInsets.zero,
-      height: 42,
-      width: 42,
-      padding: const EdgeInsets.only(top: 2, left: 4, right: 4, bottom: 2),
-      decoration: BoxDecoration(
-        color: color,
-        borderRadius: BorderRadius.circular(4.0),
-      ),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Text(formattedDate.split(' ')[0], // Display the day
-              style: AppStyles.medium14.copyWith(color: Colors.white)),
-          Text(formattedDate.split(' ')[1], // Display the month
-              style: AppStyles.regular10.copyWith(color: Colors.white)),
-        ],
+    return AspectRatio(
+      aspectRatio: 1,
+      child: FittedBox(
+        fit: BoxFit.scaleDown,
+        child: Container(
+          alignment: Alignment.center,
+          margin: EdgeInsets.zero,
+          height: 42,
+          width: 42,
+          padding: const EdgeInsets.only(top: 2, left: 4, right: 4, bottom: 2),
+          decoration: BoxDecoration(
+            color: color,
+            borderRadius: BorderRadius.circular(4.0),
+          ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(formattedDate.split(' ')[0], // Display the day
+                  style: AppStyles.medium14.copyWith(color: Colors.white)),
+              Text(formattedDate.split(' ')[1], // Display the month
+                  style: AppStyles.regular10.copyWith(color: Colors.white)),
+            ],
+          ),
+        ),
       ),
     );
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:test_screens/app/modules/home/views/widgets/search_options.dart';
+import 'package:test_screens/app/modules/home/views/widgets/custome_home_button.dart';
+import 'package:test_screens/app/modules/home/views/widgets/home_content.dart';
 
 class PageViewOptionButtons extends StatefulWidget {
   const PageViewOptionButtons({super.key});
@@ -10,8 +11,6 @@ class PageViewOptionButtons extends StatefulWidget {
 
 class _PageViewOptionButtonsState extends State<PageViewOptionButtons> {
   bool isToDoSelected = true;
-  final PageController pageController =
-      PageController(); // Ensure you have this
 
   void _onButtonPressed(bool toDoSelected, int pageIndex) {
     setState(() {

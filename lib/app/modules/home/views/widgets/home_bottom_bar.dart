@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:test_screens/core/theme/theme_constants.dart';
 import 'package:test_screens/core/utils/assets.dart';
 
 class CustomBottomNavigationBar extends StatelessWidget {
