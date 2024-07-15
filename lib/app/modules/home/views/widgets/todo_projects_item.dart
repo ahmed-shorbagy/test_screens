@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:test_screens/app/data/models/todo_projects_item_model.dart';
 import 'package:test_screens/core/utils/app_styles.dart';
 
-import '../../../../../core/utils/assets.dart';
-
 class ToDoProjectsItem extends StatelessWidget {
   const ToDoProjectsItem({
     super.key,

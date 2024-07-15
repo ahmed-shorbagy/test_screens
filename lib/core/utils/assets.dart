@@ -15,6 +15,7 @@ class Assets {
   static const String imagesArrowDown = "assets/images/arrowdown.png";
   static const String imagesHome = "assets/images/home.png";
   static const String imagesProfile = "assets/images/profile.png";
+  static const String imagesMenuBack = "assets/images/menuBack.png";
 
   /// Assets for imagesProject2
   /// assets/images/project2.svg

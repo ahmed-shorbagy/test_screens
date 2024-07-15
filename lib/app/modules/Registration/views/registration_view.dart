@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
-import 'package:test_screens/app/modules/Registration/views/widgets/email_textFiled_with_label.dart';
-import 'package:test_screens/app/modules/Registration/views/widgets/linear_gradientColor_sign_in_button.dart';
 import 'package:test_screens/app/modules/Registration/views/widgets/login_form.dart';
-import 'package:test_screens/app/modules/Registration/views/widgets/login_options.dart';
-import 'package:test_screens/app/modules/Registration/views/widgets/password_text_field_with_label.dart';
 import 'package:test_screens/core/theme/theme_constants.dart';
 import 'package:test_screens/core/utils/app_styles.dart';
 import 'package:test_screens/core/utils/assets.dart';

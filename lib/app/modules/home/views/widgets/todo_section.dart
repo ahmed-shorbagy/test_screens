@@ -8,28 +8,26 @@ class ToDoSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: const BoxDecoration(color: Colors.white),
-      child: const SingleChildScrollView(
-        child: Column(
-          children: [
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 22, vertical: 16),
-              child: ToDoSectionOptions(),
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20),
-              child: HighPirioritySection(),
-            ),
-            SizedBox(
-              height: 24,
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20),
-              child: ToDayReportsSection(),
-            ),
-          ],
-        ),
+    return const SingleChildScrollView(
+      physics: BouncingScrollPhysics(),
+      child: Column(
+        children: [
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 22, vertical: 16),
+            child: ToDoSectionOptions(),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            child: HighPirioritySection(),
+          ),
+          SizedBox(
+            height: 24,
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            child: ToDayReportsSection(),
+          ),
+        ],
       ),
     );
   }

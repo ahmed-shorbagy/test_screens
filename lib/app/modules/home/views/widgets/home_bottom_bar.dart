@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_screens/app/modules/home/views/widgets/bottom_bar_item.dart';
 
 import '../../../../../core/utils/app_styles.dart';
 import '../../../../../core/utils/assets.dart';
@@ -10,38 +11,25 @@ class HomeBottomBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BottomAppBar(
+    return const BottomAppBar(
       height: 70,
-      shape: const CircularNotchedRectangle(),
+      shape: CircularNotchedRectangle(),
       elevation: 0,
       color: Colors.white,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          GestureDetector(
-            onTap: () {},
-            child: Column(
-              children: [
-                Image.asset(Assets.imagesHome),
-                const SizedBox(height: 4),
-                Text("Home",
-                    style: AppStyles.regular12
-                        .copyWith(color: const Color(0xff476572))),
-              ],
-            ),
+          BottomBarItem(
+            image: Assets.imagesHome,
+            title: "Home",
           ),
-          GestureDetector(
-            onTap: () {},
-            child: Column(
-              children: [
-                Image.asset(Assets.imagesProfile),
-                const SizedBox(height: 4),
-                Text("Profile",
-                    style: AppStyles.regular12
-                        .copyWith(color: const Color(0xff5C5C5C))),
-              ],
-            ),
-          )
+          SizedBox(
+            width: 10,
+          ),
+          BottomBarItem(
+            image: Assets.imagesProfile,
+            title: "Profile",
+          ),
         ],
       ),
     );

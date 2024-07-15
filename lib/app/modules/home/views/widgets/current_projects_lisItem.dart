@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:test_screens/app/data/models/current_projects_listItem_model.dart';
 import 'package:test_screens/core/utils/app_styles.dart';
-import 'package:test_screens/core/utils/assets.dart';
 
 class CurrentProjectsListItem extends StatelessWidget {
   const CurrentProjectsListItem({
