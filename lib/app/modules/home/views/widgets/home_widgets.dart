@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:test_screens/app/modules/home/views/widgets/current_projects_section.dart';
-import 'package:test_screens/app/modules/home/views/widgets/custome_home_button.dart';
+import 'package:test_screens/app/modules/home/views/widgets/custome_button.dart';
 import 'package:test_screens/app/modules/home/views/widgets/todo_section.dart';
 import 'package:test_screens/core/utils/app_styles.dart';
 import 'package:test_screens/core/utils/assets.dart';
@@ -246,8 +246,9 @@ class _PageViewOptionButtonsState extends State<PageViewOptionButtons> {
       child: Row(
         children: [
           Expanded(
-            child: CustomHomeButton(
-              padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 8),
+            child: CustomButton(
+              sideColor: const Color(0xffDADADA),
+              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
               text: 'To Do (12)',
               isSelected: isToDoSelected,
               onPressed: () => _onButtonPressed(true, 0),
@@ -258,8 +259,9 @@ class _PageViewOptionButtonsState extends State<PageViewOptionButtons> {
             ),
           ),
           Expanded(
-            child: CustomHomeButton(
-              padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 8),
+            child: CustomButton(
+              sideColor: const Color(0xffDADADA),
+              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
               text: 'Comments (11)',
               isSelected: !isToDoSelected,
               onPressed: () => _onButtonPressed(false, 2),

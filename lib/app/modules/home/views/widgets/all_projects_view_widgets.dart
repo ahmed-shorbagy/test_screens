@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:test_screens/app/data/models/search_results_item_model.dart';
 import 'package:test_screens/app/data/models/todo_projects_item_model.dart';
-import 'package:test_screens/app/modules/home/views/widgets/custome_home_button.dart';
+import 'package:test_screens/app/modules/home/views/widgets/custome_button.dart';
 import 'package:test_screens/core/utils/app_styles.dart';
 import 'package:test_screens/core/utils/assets.dart';
 
@@ -129,7 +129,8 @@ class _SearchOptionsState extends State<SearchOptions> {
     return Row(
       children: [
         Expanded(
-          child: CustomHomeButton(
+          child: CustomButton(
+            sideColor: const Color(0xffDADADA),
             text: 'Daily',
             isSelected: selectedIndex == 0,
             onPressed: () => _onButtonPressed(0),
@@ -140,7 +141,8 @@ class _SearchOptionsState extends State<SearchOptions> {
           ),
         ),
         Expanded(
-          child: CustomHomeButton(
+          child: CustomButton(
+            sideColor: const Color(0xffDADADA),
             text: 'Weekly',
             isSelected: selectedIndex == 1,
             onPressed: () => _onButtonPressed(1),
@@ -148,7 +150,8 @@ class _SearchOptionsState extends State<SearchOptions> {
           ),
         ),
         Expanded(
-          child: CustomHomeButton(
+          child: CustomButton(
+            sideColor: const Color(0xffDADADA),
             text: 'Monthly',
             isSelected: selectedIndex == 2,
             onPressed: () => _onButtonPressed(2),

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:test_screens/app/modules/Registration/views/widgets/custom_text_feild.dart';
-import 'package:test_screens/app/modules/Registration/views/widgets/custom_button.dart';
+import 'package:test_screens/app/modules/home/views/widgets/custome_button.dart';
+import 'package:test_screens/app/routes/app_pages.dart';
 import 'package:test_screens/core/utils/app_styles.dart';
 
 import 'login_options.dart';
@@ -69,7 +72,28 @@ class _LoginFormState extends State<LoginForm> {
           const SizedBox(
             height: 24,
           ),
-          const CustomButton()
+          CustomButton(
+            padding: const EdgeInsets.symmetric(vertical: 16),
+            sideColor: Colors.transparent,
+            gradientColor: const LinearGradient(
+              colors: [
+                Color(0xff465C65),
+                Color(0xff4B859F),
+              ],
+              begin: Alignment.bottomCenter,
+              end: Alignment.topCenter,
+            ),
+            text: "Login",
+            onPressed: () {
+              if (formKey.currentState!.validate()) {
+                formKey.currentState!.save();
+                Get.offNamed(Routes.HOME);
+              } else {
+                autovalidateMode = AutovalidateMode.always;
+              }
+            },
+            borderRadius: BorderRadius.circular(8),
+          )
         ],
       ),
     );
