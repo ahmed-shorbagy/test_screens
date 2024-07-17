@@ -192,7 +192,7 @@ class SearchResultsItem extends StatelessWidget {
       color: Colors.white,
       elevation: 4,
       child: Container(
-        height: 62,
+        height: 72,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(4),
             color: _getColor(searchResultsITemModel.status).withOpacity(0.03),
@@ -203,10 +203,14 @@ class SearchResultsItem extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Row(
             children: [
-              DateContainer(
-                color: searchResultsITemModel.status == ToDoStatus.NeedToRieview
-                    ? const Color(0xffA70000)
-                    : const Color(0xff3D5058),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 14),
+                child: DateContainer(
+                  color:
+                      searchResultsITemModel.status == ToDoStatus.NeedToRieview
+                          ? const Color(0xffA70000)
+                          : const Color(0xff3D5058),
+                ),
               ),
               const SizedBox(
                 width: 13,
@@ -349,10 +353,10 @@ class DateContainer extends StatelessWidget {
       child: FittedBox(
         fit: BoxFit.scaleDown,
         child: Container(
+          width: 40,
+          height: 40,
           alignment: Alignment.center,
           margin: EdgeInsets.zero,
-          height: 42,
-          width: 42,
           padding: const EdgeInsets.only(top: 2, left: 4, right: 4, bottom: 2),
           decoration: BoxDecoration(
             color: color,
