@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:test_screens/app/modules/home/views/profile_view.dart';
-import 'package:test_screens/app/modules/home/views/widgets/home_content.dart';
-import 'package:test_screens/app/modules/home/views/widgets/home_floating_button.dart';
-import 'package:test_screens/app/modules/home/views/widgets/home_bottom_bar.dart';
-
-import 'widgets/home_app_bar.dart';
+import 'package:test_screens/app/modules/home/views/widgets/home_widgets.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
